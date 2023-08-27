@@ -31,7 +31,7 @@ use yii\authclient\OAuth2;
  *     // ...
  * ]
  * ```
- * 
+ *
  * @see https://docs.microsoft.com/en-us/azure/active-directory/develop/
  * @see https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow
  *
@@ -43,15 +43,17 @@ class Azure extends OAuth2
     /**
      * {@inheritdoc}
      */
-    public $authUrl = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize';
+    //public $authUrl = 'https://login.microsoftonline.com/037b8405-eda8-45ed-b013-9b72af6c9c80/oauth2/v2.0/authorize';
     /**
      * {@inheritdoc}
      */
-    public $tokenUrl = 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
+    //public $tokenUrl = 'https://login.microsoftonline.com/037b8405-eda8-45ed-b013-9b72af6c9c80/oauth2/v2.0/token';
     /**
      * {@inheritdoc}
      */
     public $apiBaseUrl = 'https://graph.microsoft.com/v1.0';
+
+    public $scope = /*'https://graph.microsoft.com/.default offline_access'; */'https://outlook.office.com/IMAP.AccessAsUser.All offline_access';
 
 
     /**
